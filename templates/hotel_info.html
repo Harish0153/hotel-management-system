@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel Info</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h2>{{ hotel.name }} Management</h2>
+        <div class="card mt-3">
+            <div class="card-body">
+                <p><strong>Total Rooms:</strong> {{ hotel.total_rooms }}</p>
+                <p><strong>Booked Rooms:</strong> {{ hotel.booked_rooms }}</p>
+                <p><strong>Available Rooms:</strong> {{ hotel.available_rooms }}</p>
+                {% if message %}
+                    <div class="alert alert-info">{{ message }}</div>
+                {% endif %}
+                <form method="post" class="mt-4">
+                    <div class="input-group mb-3">
+                        <input type="number" name="num_rooms" class="form-control" placeholder="Number of Rooms" required>
+                        <button type="submit" name="action" value="book" class="btn btn-primary">Book</button>
+                        <button type="submit" name="action" value="cancel" class="btn btn-warning">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <a href="{{ url_for('dashboard') }}" class="btn btn-secondary mt-3">Back</a>
+        <a href="{{ url_for('logout') }}" class="btn btn-outline-danger mt-3">Logout</a>
+    </div>
+</body>
+</html>
