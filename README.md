@@ -82,8 +82,8 @@ Payment gateway integration
 Hotel search and filter options
 
 👤 Author
-
 K Harish Ganapathi
+
 📧 harishhari8247@gmail.com
 
-💼 Your GitHub Profile
+💼 Harish0153
